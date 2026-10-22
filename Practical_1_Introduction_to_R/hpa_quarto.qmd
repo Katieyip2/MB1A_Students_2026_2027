@@ -1,0 +1,100 @@
+---
+title: "Analysis of brain data"
+author: "Katie Yip"
+editor: visual
+---
+
+**Aim:**
+
+summarise and calculate total number of genes with regionally elevated expression in the **forebrain**
+
+Sum of genes expressed in a elevated manner in the **cerebral cortex**:
+
+```{r}
+human_elevated_cerebralcortex <- 180
+pig_elevated_cerebralcortex <- 109
+mouse_elevated_cerebralcortex <- 55
+total_elevated_cerebralcortex <- sum(human_elevated_cerebralcortex + pig_elevated_cerebralcortex + mouse_elevated_cerebralcortex)
+print(total_elevated_cerebralcortex)
+```
+
+Sum of genes expressed in a elevated manner in the **basal ganglia**:
+
+```{r}
+human_elevated_basalganglia <- 83
+pig_elevated_basalganglia <- 157
+mouse_elevated_basalganglia <- 185
+total_elevated_basalganglia <- sum(human_elevated_basalganglia + pig_elevated_basalganglia + mouse_elevated_basalganglia)
+print(total_elevated_basalganglia)
+```
+
+Sum of genes expressed in a elevated manner in the **thalamus**:
+
+```{r}
+human_elevated_thalamus <- 57
+pig_elevated_thalamus <- 31
+mouse_elevated_thalamus <- 60
+total_elevated_thalamus <- sum(human_elevated_thalamus + pig_elevated_thalamus + mouse_elevated_thalamus)
+print(total_elevated_thalamus)
+```
+
+Sum of genes expressed in a elevated manner in the **hypothalamus**:
+
+```{r}
+human_elevated_hypothalamus <- 110
+pig_elevated_hypothalamus <- 45
+mouse_elevated_hypothalamus <- 98
+total_elevated_hypothalamus <- sum(human_elevated_hypothalamus + pig_elevated_hypothalamus + mouse_elevated_hypothalamus)
+print(total_elevated_hypothalamus)
+```
+
+Sum of total upregulated genes in the forebrain:
+
+```{r}
+total_upregulatedgenes <- sum(total_elevated_hypothalamus + total_elevated_thalamus + total_elevated_basalganglia +total_elevated_cerebralcortex)
+print(paste("The total number of upregulated genes in the forebrain in all 3 species is" , total_upregulatedgenes ))
+```
+
+Sum of total upregulated genes in the forebrain of humans:
+
+```{r}
+total_humanupregulatedgenes <- sum(human_elevated_hypothalamus + human_elevated_thalamus + human_elevated_basalganglia +human_elevated_cerebralcortex)
+print(paste("The total number of upregulated genes in the forebrain in humans is" , total_humanupregulatedgenes ))
+```
+
+Sum of total upregulated genes in the forebrain of pigs:
+
+```{r}
+total_pigupregulatedgenes <- sum(pig_elevated_hypothalamus + pig_elevated_thalamus + pig_elevated_basalganglia + pig_elevated_cerebralcortex)
+print(paste("The total number of upregulated genes in the forebrain in pig is" , total_pigupregulatedgenes ))
+```
+
+Sum of total upregulated genes in the forebrain of mouse:
+
+```{r}
+total_mouseupregulatedgenes <- sum(mouse_elevated_hypothalamus + mouse_elevated_thalamus + mouse_elevated_basalganglia +mouse_elevated_cerebralcortex)
+print(paste("The total number of upregulated genes in the forebrain in mouse is" , total_mouseupregulatedgenes ))
+```
+
+The highest number of upregulated genes is in humans with 430 genes
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).

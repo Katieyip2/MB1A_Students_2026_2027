@@ -1,0 +1,72 @@
+---
+title: "prac1_exercises"
+author: "Katie Yip"
+editor: visual
+---
+
+rounding numbers:
+
+```{r}
+round(3.14159)
+round(3.14159,digits = 2)
+```
+
+sequencing numbers:
+
+```{r}
+print(rep(5,7))
+print(rep(x=5, times=7))
+
+```
+
+creating character, numberical and logical variables and checking their class and printing them:
+
+```{r}
+character <- "I am a character"
+print(character)
+print(class(character))
+
+boolean <- TRUE
+print(boolean)
+print(class(boolean))
+
+number <- 1012
+print(number)
+print(class(number))
+
+
+```
+
+variables of different types:
+
+```{r}
+cell_id_1 <- "CX1"
+cell_id_2 <- "CX2"
+treated_1 <- TRUE
+treated_2 <- FALSE
+n_before_1 <- 5415
+n_before_2 <- 8123
+n_after_1 <- 1432
+n_after_2 <- 7543
+```
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
